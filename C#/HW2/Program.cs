@@ -24,7 +24,6 @@
             Console.Write((char)upCase3);
             Console.Write((char)upCase4);
             Console.WriteLine((char)upCase5);
-            
         }
     }
 }
