@@ -6,6 +6,7 @@
     <RootNamespace>_5</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>_5.Multiply</StartupObject>
   </PropertyGroup>
 
 </Project>
