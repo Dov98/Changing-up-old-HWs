@@ -55,7 +55,18 @@
             {
                 int i = rand.Next(board.GetLength(0));
                 int k = rand.Next(board.GetLength(1));
-                board[i, k] = 'T';
+                //If there is no T already there it prints the T
+                if(board[i, k] != 'T')
+                {
+                    board[i, k] = 'T';
+                }
+                //If there is a T there already, then it subtracts from J so it guesses another time.
+                //This is to prevent overlap and make sure that there are 10 T's on the board
+                else
+                {
+                    j--;
+                }
+                
             }
             
         }
@@ -87,6 +98,14 @@
                 {
                     Console.WriteLine("Invalid coordinates. Try again.");
                     return;
+                }
+
+                //If you guess a place you chose already
+                if (board[row, col] == 'G')
+                {
+                    Console.WriteLine("You already guessed that spot!");
+                    i--; // doesn’t count as a turn
+                    continue;
                 }
 
                 //If the coordinates you guessed equal a target, you have 1 correct, the cg counter goes up by 1, and it prints a G where you guessed
